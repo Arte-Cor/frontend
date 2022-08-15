@@ -5,8 +5,14 @@ export type DynamicComponentModel =
   | ({__component: 'body.differentials'} & DifferentialsSectionModel)
   | ({__component: 'body.depositions'} & DepositionsModel)
   | ({__component: 'body.product-list'} & ProductListModel)
-  | ({__component: 'body.about'} & AboutSectionModel);
+  | ({__component: 'body.about'} & AboutSectionModel)
+  | ({__component: 'body.slider'} & SliderModel)
+  | ({__component: 'body.instagram-feed'} & InstagramSectionModel);
 
+export interface SliderModel {
+  id: number;
+  image?: ImageModel[];
+}
 export interface CategorySectionModel {
   id: number;
   title?: string;
@@ -46,6 +52,12 @@ export interface AboutSectionModel {
   paragraph?: string;
 }
 
+export interface InstagramSectionModel {
+  id: number;
+  title?: string;
+  subtitle?: string;
+}
+
 export interface CategoryModel {
   id: number;
   attributes: {
@@ -54,6 +66,12 @@ export interface CategoryModel {
     slug: string;
     poster_url: string;
   }
+}
+
+export interface ImageModel {
+  id: number;
+  url: string;
+  title: string;
 }
 
 export interface IconTextModel {

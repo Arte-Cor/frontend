@@ -1,7 +1,6 @@
 import { DynamicRender } from '@components/DynamicRender';
 import { SeoComponent } from '@components/Seo';
 import { SeoSchema } from '@components/SeoSchema';
-import { Container } from '@mui/material';
 import type { GetStaticProps, NextPage } from 'next';
 import { HomeModel } from 'src/models/home.model';
 import { apiService } from 'src/service/api-service';
@@ -10,7 +9,6 @@ const Home: NextPage<HomeModel> = ({ data }) => {
   return (
     <>
       <SeoComponent {...data?.attributes.seo}></SeoComponent>
-      <Container sx={{ padding: 4 }}>Exemplo</Container>
       {!!data?.attributes.body.length &&
         data.attributes.body.map((component) => (
           <DynamicRender
