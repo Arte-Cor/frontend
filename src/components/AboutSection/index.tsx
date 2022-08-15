@@ -16,6 +16,7 @@ export const AboutSection: React.FC<AboutSectionModel> = ({
             <Box
               component="img"
               src={url_image ?? ''}
+              alt={`${title} ${subtitle}`}
               sx={{ width: '100%', borderRadius: 2 }}
             ></Box>
           )}

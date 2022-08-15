@@ -20,6 +20,7 @@ export const ProductCard: React.FC<{ product: ProductModel }> = ({
         <Box
           component="img"
           src={product.attributes.url_image}
+          alt={product.attributes.title}
           sx={{
             aspectRatio: '1/1',
             display: 'block',

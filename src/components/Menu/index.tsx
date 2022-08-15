@@ -7,7 +7,12 @@ export const Menu: React.FC = () => {
     <M.AppBar position="sticky" elevation={0} sx={{ top: 0 }}>
       <M.Container>
         <M.Toolbar disableGutters sx={{ gap: 6 }}>
-          <M.Box component="img" src="./logo.svg" sx={{ height: 40 }}></M.Box>
+          <M.Box
+            component="img"
+            src="./logo.svg"
+            alt="ArteCor"
+            sx={{ height: 40 }}
+          ></M.Box>
           <M.Box
             sx={{
               display: { xs: 'none', md: 'flex' },

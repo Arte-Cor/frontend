@@ -32,6 +32,7 @@ export const CommentCarousel: React.FC<{ comments?: CommentModel[] }> = ({
                       component="img"
                       src={comment.url_image}
                       sx={{ width: 40, borderRadius: '40px' }}
+                      alt={comment.name}
                     ></Box>
                   </Grid>
                   <Grid item>
