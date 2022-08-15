@@ -14,6 +14,7 @@ export const ProductCard: React.FC<{ product: ProductModel }> = ({
           padding: 1,
           background: 'white',
           textAlign: 'center',
+          cursor: 'pointer',
         }}
       >
         <Box
