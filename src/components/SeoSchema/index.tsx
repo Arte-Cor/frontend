@@ -34,7 +34,7 @@ export const SeoSchema: React.FC<SEOModel> = ({
             alternativeHeadline: title,
             proficiencyLevel: 'Beginner',
             image: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.jpg`,
-            author: 'Blog ZQC',
+            author: 'ArteCor',
             genre: canonical,
             keywords: keywords,
             publisher: 'http://www.wule.com.br/',
@@ -56,7 +56,7 @@ export const SeoSchema: React.FC<SEOModel> = ({
                 position: 1,
                 item: {
                   '@id': process.env.NEXT_PUBLIC_BASE_URL,
-                  name: 'Blog ZQC',
+                  name: 'ArteCor',
                 },
               },
               {
@@ -77,7 +77,7 @@ export const SeoSchema: React.FC<SEOModel> = ({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ImageObject',
-            author: 'Blog ZQC',
+            author: 'ArteCor',
             contentUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.jpg`,
             description: description,
             name: title,
