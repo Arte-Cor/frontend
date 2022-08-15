@@ -2,9 +2,11 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="pt-br">
+      <meta charSet="utf-8" />
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
