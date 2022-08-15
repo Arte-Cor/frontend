@@ -53,6 +53,10 @@ export const SeoComponent: React.FC<SEOModel> = ({
         content={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.jpg`}
       />
       <meta
+        name="twitter:image"
+        content={`${process.env.NEXT_PUBLIC_BASE_URL}/logo.jpg`}
+      />
+      <meta
         name="twitter:site"
         content={`${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`}
       />
