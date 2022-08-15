@@ -1,63 +1,39 @@
 import { Box, Typography } from '@mui/material';
+import { ProductModel } from 'src/models/dynamic-component.model';
 
-interface ProductCardProps {
-  src: string;
-  title: string;
-  subtitle: string;
-  price: number;
-}
-
-export const ProductCard: React.FC<ProductCardProps> = ({
-  src,
-  title,
-  subtitle,
-  price,
+export const ProductCard: React.FC<{ product: ProductModel }> = ({
+  product,
 }) => {
   return (
-    <Box>
-      <Box sx={{ position: 'relative' }}>
-        <Box
-          component="img"
-          src={src}
-          title={title}
-          sx={{
-            aspectRatio: '2/2',
-            height: '100%',
-            width: '100%',
-            objectFit: 'cover',
-            borderRadius: 2,
-          }}
-        ></Box>
-        <Typography
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 8,
-            backgroundColor: 'rgba(0,0,0,0.1)',
-            backdropFilter: 'blur(10px)',
-            color: 'white',
-            padding: '8px 12px',
-            borderRadius: 2,
-            fontWeight: 600,
-          }}
-          variant="body2"
-        >
-          pintado a mão
-        </Typography>
-      </Box>
-      <Typography variant="h6">{title}</Typography>
-      <Typography>{subtitle}</Typography>
-      <Typography
+    <Box
+      sx={{
+        borderRadius: 2,
+        border: '1px solid #EEE',
+        padding: 1,
+        background: 'white',
+        textAlign: 'center',
+      }}
+    >
+      <Box
+        component="img"
+        src={product.attributes.url_image}
         sx={{
-          fontSize: 26,
-          fontWeight: 900,
-          textAlign: 'center',
+          aspectRatio: '1/1',
+          display: 'block',
+          width: '100%',
+          objectFit: 'cover',
+          marginBottom: 2,
         }}
+      ></Box>
+      <Typography variant="body2">{product.attributes.title}</Typography>
+      <Typography
+        variant="button"
+        sx={{ fontSize: 20, fontWeight: 'bold', fontFamily: 'K2D' }}
       >
         {new Intl.NumberFormat('pt-br', {
           style: 'currency',
           currency: 'BRL',
-        }).format(price)}
+        }).format(product.attributes.price)}
       </Typography>
     </Box>
   );

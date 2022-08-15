@@ -7,15 +7,6 @@ import {
   StyledProductCategTitle,
 } from './style';
 
-export interface ProductCategProps {
-  id: number;
-  image: {
-    url: string;
-    title: string;
-  };
-  title: string;
-}
-
 export const ProductCategComponent: React.FC<CategoryModel> = ({
   attributes,
 }) => {

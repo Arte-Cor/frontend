@@ -1,6 +1,11 @@
 import { IconTypes } from "src/@types/IconType";
 
-export type DynamicComponentModel = ({__component: 'body.category-section'} & CategorySectionModel) | ({__component: 'body.differentials'} & DifferentialsSectionModel) | ({__component: 'body.depositions'} & DepositionsModel);
+export type DynamicComponentModel = 
+  ({__component: 'body.category-section'} & CategorySectionModel)
+  | ({__component: 'body.differentials'} & DifferentialsSectionModel)
+  | ({__component: 'body.depositions'} & DepositionsModel)
+  | ({__component: 'body.product-list'} & ProductListModel)
+  | ({__component: 'body.about'} & AboutSectionModel);
 
 export interface CategorySectionModel {
   id: number;
@@ -24,6 +29,23 @@ export interface DepositionsModel {
   comment?: CommentModel[];
 }
 
+export interface ProductListModel {
+  id: number;
+  title?: string;
+  subtitle?: string;
+  produtos?: {
+    data: ProductModel[];
+  }
+}
+
+export interface AboutSectionModel {
+  id: number;
+  url_image?: string;
+  title?: string;
+  subtitle?: string;
+  paragraph?: string;
+}
+
 export interface CategoryModel {
   id: number;
   attributes: {
@@ -39,6 +61,17 @@ export interface IconTextModel {
   title: string;
   subtitle: string;
   icon: IconTypes;
+}
+
+export interface ProductModel {
+  id: number;
+  attributes: {
+    title: string;
+    subtitle: string;
+    price: number;
+    url_image: string;
+    slug: string;
+  }
 }
 
 export interface CommentModel {
