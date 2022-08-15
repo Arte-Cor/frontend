@@ -1,5 +1,6 @@
 import { DynamicRender } from '@components/DynamicRender';
 import { SeoComponent } from '@components/Seo';
+import { SeoSchema } from '@components/SeoSchema';
 import { Container } from '@mui/material';
 import type { GetStaticProps, NextPage } from 'next';
 import { HomeModel } from 'src/models/home.model';
@@ -17,6 +18,7 @@ const Home: NextPage<HomeModel> = ({ data }) => {
             {...component}
           ></DynamicRender>
         ))}
+      <SeoSchema {...data?.attributes.seo}></SeoSchema>
     </>
   );
 };
