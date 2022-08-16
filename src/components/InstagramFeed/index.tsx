@@ -18,7 +18,7 @@ export const InstagramFeed: React.FC<InstagramSectionModel> = ({
 
   const getInstagramFeed = async () => {
     const { data } = await axios.get<InstaFeedModel>(
-      'https://graph.facebook.com/v14.0/17841434031831522/media?access_token=EAAIjv6zZBtzoBAInEFjZA8HMQCgegSI2zTpRCZBd8ZCFG0VUmHIeit99OlETwKwJHf3ChoDiRglLNIQUzSbMv0sg2vHzZCHsG4SCOvlUdjK6m7bjlSqpbNFhMaynK804kb82JVZCrXiJO1ZCQZBijtng8IJbF3bosZAjBZCLcgTTufPZCen9s0o8TiqRrytkXZCY422QrpZAG6jgcVzwIesqFFC2z&debug=all&fields=caption%2Cmedia_url%2Cmedia_type%2Cthumbnail_url&format=json&method=get&pretty=0&suppress_http_code=1&transport=cors&limit=12'
+      'https://graph.facebook.com/v14.0/17841434031831522/media?access_token=EAAIjv6zZBtzoBALIWbCnyBx9Ix9jrwKZCmgElK4sRXAlFAZCZBEzjUihfh3pZAhvF1ffe1ZBuNEHgA0zl4YZB66aaqqYasGrPNjRrBUqmjdFTJ8yArb6RFItEwXwnAiaFf7NKGVy3WNrGZCmGkftiA3vZC57dM8VmMeXwL4Jqqx4ZAKQZDZD&debug=all&fields=caption%2Cmedia_url%2Cmedia_type%2Cthumbnail_url&format=json&method=get&pretty=0&suppress_http_code=1&transport=cors&limit=12'
     );
 
     setInstaFeed(data);
