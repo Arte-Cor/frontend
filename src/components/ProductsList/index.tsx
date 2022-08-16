@@ -9,13 +9,13 @@ export const ProductList: React.FC<ProductListModel> = ({
   subtitle,
   produtos,
 }) => (
-  <BgPrimaryBox>
-    <Container>
-      <Grid container spacing={4}>
-        <StyledProductSectionHeader
-          title={title}
-          subtitle={subtitle}
-        ></StyledProductSectionHeader>
+  <BgPrimaryBox sx={{ padding: 0 }}>
+    <StyledProductSectionHeader
+      title={title}
+      subtitle={subtitle}
+    ></StyledProductSectionHeader>
+    <Container sx={{ padding: 4 }}>
+      <Grid container>
         {!!produtos?.data.length &&
           produtos.data
             .filter(
@@ -26,7 +26,7 @@ export const ProductList: React.FC<ProductListModel> = ({
                 !!product.attributes.price
             )
             .map((product) => (
-              <Grid key={product.id} item md={3}>
+              <Grid key={product.id} item md={3} xs={6}>
                 <ProductCard product={product}></ProductCard>
               </Grid>
             ))}

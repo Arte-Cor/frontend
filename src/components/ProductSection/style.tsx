@@ -26,7 +26,7 @@ export const StyledProductSectionCategs = styled(
       <Grid
         container
         sx={{ justifyContent: { xs: 'start', md: 'center' } }}
-        spacing={2}
+        columnSpacing={2}
       >
         {!!categories?.length &&
           categories.map((category) => (

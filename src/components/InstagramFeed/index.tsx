@@ -29,7 +29,7 @@ export const InstagramFeed: React.FC<InstagramSectionModel> = ({
   }, []);
   return (
     <BgPrimaryBox sx={{ padding: 0, paddingTop: 4 }}>
-      <Grid container spacing={4}>
+      <Grid container rowSpacing={4}>
         <StyledProductSectionHeader
           title={title}
           subtitle={subtitle}
@@ -38,7 +38,7 @@ export const InstagramFeed: React.FC<InstagramSectionModel> = ({
           {!!instaFeed?.data?.length && (
             <Grid container spacing={0.4}>
               {instaFeed.data.map((image) => (
-                <Grid item key={image.id} md={2} sm={6}>
+                <Grid item key={image.id} md={2} xs={4}>
                   <NextLink
                     href="https://www.instagram.com/mah_arte_e_cor/"
                     passHref={true}
